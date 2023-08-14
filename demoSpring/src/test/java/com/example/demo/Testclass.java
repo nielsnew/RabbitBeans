@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -17,14 +16,14 @@ public class Testclass {
 	@Autowired
 	private ApplicationContext applicationContext;
 
-	@MockBean
-	private Receiver receiver;
-
-	@MockBean
-	private Runner runner;
-
-	@MockBean
-	private SimpleController simpleController;
+//	@MockBean
+//	private Receiver receiver;
+//
+//	@MockBean
+//	private Runner runner;
+//
+//	@MockBean
+//	private SimpleController simpleController;
 
 	@Test
 	public void defaultje() {
@@ -32,17 +31,17 @@ public class Testclass {
 	}
 
 	@Test
-	public void context1() {
+	public void isClassReceiverNotNull() {
 		assertNotNull(applicationContext.getBean(Receiver.class));
 	}
 
 	@Test
-	public void context2() {
+	public void isClassRunnerNotNull() {
 		assertNotNull(applicationContext.getBean(Runner.class));
 	}
 
 	@Test
-	public void context3() {
+	public void isClassSimplecontrollerNotNull() {
 		assertNotNull(applicationContext.getBean(SimpleController.class));
 	}
 
