@@ -16,6 +16,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = "com.example.demo")
 @EntityScan("com.example.demo")
+@
+@Config
 public class MessagingRabbitmqApplication {
 
 	static final String topicExchangeName = "spring-boot-exchange";
